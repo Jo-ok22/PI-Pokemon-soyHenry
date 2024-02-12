@@ -10,3 +10,6 @@ module.exports = (sequelize) => {
     },
   });
 };
+
+
+//probar si se conecto bien 
