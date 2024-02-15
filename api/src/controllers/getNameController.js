@@ -98,4 +98,4 @@ const pokeName = async (req, res) => {
 module.exports = pokeName;
 
 
-//LISTO RE LISTO BUSCA EN API Y DB Y DICE DE DONDE VINO
+//LISTO RE LISTO BUSCA EN API Y DB Y DICE DE DONDE VINO !!!
