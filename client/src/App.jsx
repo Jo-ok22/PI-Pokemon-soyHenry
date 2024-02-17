@@ -3,6 +3,8 @@ import LandingPage from './components/landing/LandingPage';
 import Home from './components/home/Home';
 import Detail from './components/detail/Detail';
 import Form from './components/form/Form';
+import Card from './components/card/Card';
+import Cards from './components/cards/Cards';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
