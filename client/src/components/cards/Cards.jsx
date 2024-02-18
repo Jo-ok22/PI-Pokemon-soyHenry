@@ -1,21 +1,42 @@
+// import Card from '../card/Card';
+
+// const Cards = ({pokemones}) => {
+//     return(
+//         <div>
+//             {pokemones.map(({id, name, image, types}) =>{
+//                 return <Card
+//                 key={id}
+//                 id={id}
+//                 name={name}
+//                 image={image}
+//                 onClose={onClose}
+//                 types={types}
+//                 />
+//             })}
+
+//         </div>
+//     )
+// }
+
+// export default Cards
+
+
 import Card from '../card/Card';
 
-const Cards = ({personajePokemons, onClose}) => {
-    return(
+const Cards = ({ pokemons }) => {
+    return (
         <div>
-            {personajePokemons.map(({id, name, image, Types}) =>{
-                return <Card
-                key={id}
-                id={id}
-                name={name}
-                image={image}
-                onClose={onClose}
-                Types={Types}
+            {pokemons.map((pokemon) => (
+                <Card
+                    key={pokemon.id}
+                    id={pokemon.id}
+                    name={pokemon.name}
+                    image={pokemon.image}
+                    types={pokemon.types} 
                 />
-            })}
-
+            ))}
         </div>
-    )
+    );
 }
 
-export default Cards
+export default Cards;

@@ -25,12 +25,16 @@ const Detail = () => {
 
     return(
         <div>
+            <h2>Id</h2>
+            <h2>Nombre</h2>
+            <h2>Imagen</h2>
             <h2>Vida:{pokemonpersonaje?.hp}</h2>
             <h2>Ataque:{pokemonpersonaje?.attack}</h2>
             <h2>Defensa:{pokemonpersonaje?.defense}</h2>
             <h2>Velocidad:{pokemonpersonaje?.speed}</h2>
             <h2>Altura:{pokemonpersonaje?.height}</h2>
             <h2>Peso:{pokemonpersonaje?.weight}</h2>
+            <h2>Tipo</h2>
 
             <Link to='/form'>
             <button>Form</button>
