@@ -1,0 +1,23 @@
+.container{
+    background-color: rgb(46, 121, 180);
+    width: fit-content;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgb(136, 226, 59);
+    text-shadow: 6px 4px 7px black;
+}
+.closeButton{
+    border: 0px;
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 6px;
+    transition: .5s;
+
+}
+.closeButton:hover{
+    box-shadow: 5px 5px 5px 0px rgb(0, 0, 0);
+}
+.closeButton2:hover{
+    box-shadow: 5px 5px 5px 0px rgb(255, 0, 0);;
+}

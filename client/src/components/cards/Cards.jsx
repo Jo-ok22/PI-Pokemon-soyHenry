@@ -1,4 +1,5 @@
 // import Card from '../card/Card';
+import style from './Cards.module.css'
 
 // const Cards = ({pokemones}) => {
 //     return(
@@ -25,7 +26,7 @@ import Card from '../card/Card';
 
 const Cards = ({ pokemons }) => {
     return (
-        <div>
+        <div className={style.container}>
             {pokemons.map((pokemon) => (
                 <Card
                     key={pokemon.id}

@@ -1,0 +1,33 @@
+.container{
+    background-color: rgb(46, 121, 180);
+    width: fit-content;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgb(136, 226, 59);
+    text-shadow: 6px 4px 7px black;
+    
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Esto centra verticalmente en la pantalla completa */
+}
+
+.validation{
+    color:rgb(255, 0, 0)
+}
+
+button{
+    background-color: #ed7d2a;
+    color: #4475b2;
+    padding: .3em;
+    font-family: rowdies;
+    font-size: 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+    transition:  0.3s ease;
+}
