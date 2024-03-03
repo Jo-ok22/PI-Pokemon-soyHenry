@@ -27,11 +27,13 @@ const validation = (input) => {
     if(!/^[0-9]+$/.test(input.peso)){
         error.peso = 'el campo solo acepta numeros del 0 al 9'
     }
+    if(!/^[a-zA-Z]+$/.test(input.tipos)){
+        error.tipos ='debe contener solo letras de a a la z'
+    }
 
     return error
 }
 
-//listo
 
 
 export default validation;

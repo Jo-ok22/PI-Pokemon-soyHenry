@@ -120,13 +120,10 @@ const getPokemonTypes = async () => {
 
 const newPokemonDb = async (name, hp, attack, defense, speed, height, weight, image, types) => {
     try {
-        // Verificar que se proporcionen tipos
-        console.log(types);
         if (!types || types.length === 0) {
             throw new Error("Se requiere al menos un tipo para el Pokémon.");
         }
 
-        // Crear el nuevo Pokémon en la base de datos
         const pokemonNuevo = await Pokemon.create({
             name,
             hp,
@@ -137,16 +134,13 @@ const newPokemonDb = async (name, hp, attack, defense, speed, height, weight, im
             weight,
             image,
         });
-
-        // Obtener los objetos Type correspondientes a los nombres de los tipos proporcionados
         const pokeTypes = await Type.findAll({ where: { name: types } });
 
-        // Asociar los tipos al nuevo Pokémon
         await pokemonNuevo.addTypes(pokeTypes);
 
         return pokemonNuevo;
     } catch (error) {
-        throw error;
+        throw error; 
     }
 };
 

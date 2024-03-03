@@ -4,15 +4,20 @@
     padding: 1em;
     border-radius: 10px;
     box-shadow: 10px 10px 5px 0px rgb(136, 226, 59);
-    text-shadow: 6px 4px 7px black;
     
+}
+
+
+.label{
+    font-family: rowdies Arial;
+    font-weight: bold; 
 }
 
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Esto centra verticalmente en la pantalla completa */
+    height: 100vh;
 }
 
 .validation{

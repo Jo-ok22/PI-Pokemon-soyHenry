@@ -1,25 +1,5 @@
-// import Card from '../card/Card';
 import style from './Cards.module.css'
 
-// const Cards = ({pokemones}) => {
-//     return(
-//         <div>
-//             {pokemones.map(({id, name, image, types}) =>{
-//                 return <Card
-//                 key={id}
-//                 id={id}
-//                 name={name}
-//                 image={image}
-//                 onClose={onClose}
-//                 types={types}
-//                 />
-//             })}
-
-//         </div>
-//     )
-// }
-
-// export default Cards
 
 
 import Card from '../card/Card';

@@ -1,52 +1,3 @@
-// import { useState } from 'react';
-// //                aca va el name del pokemon a buscar 
-// const SearchBar = () => {
-//     const [name, setName] = useState('');
-//     const handlerChange = (event) => {
-//         setName(event.target.value)
-//     }
-//     return(
-//         <div>
-//             <input
-//             type="search"
-//             onChange={handlerChange}
-//             value={name}
-//             />
-//             <button onClick={'buscarelnombredelpokemon'}>Buscar</button>
-
-//         </div>
-//     )
-// }
-
-// export default SearchBar;
-
-
-
-// import { useState } from 'react';
-
-// const SearchBar = ({ onSearch }) => {
-//   const [name, setName] = useState({
-//     name:''
-//   });
-
-//   const handleChange = (event) => {
-//     setName({...name, [event.target.name]:event.target.value})
-//   };
-
-//   const handleSearchClick = () => {
-//     onSearch(name); // Aquí debes pasar el valor actual de 'name'
-//   };
-
-//   return (
-//     <div>
-//         <input type="text" onChange={handleChange} value={name} />
-//       <button onClick={handleSearchClick}>Buscar</button>
-//     </div>
-//   );
-// }
-
-// export default SearchBar;
-
 
 import { useState } from 'react';
 
@@ -57,13 +8,25 @@ const SearchBar = ({ onSearch }) => {
     setName(event.target.value);
   };
 
-  const handleSearchClick = () => {
-    onSearch(name); // Aquí debes pasar el valor actual de 'name'
+  const handleSearchClick = async () => {
+    try {
+      const response = await fetch(`http://localhost:3001/pokemons/?name=${name}`);
+      console.log(response);
+      if (!response.ok) {
+        throw new Error(`Error al buscar el Pokémon: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+
+      onSearch(data);
+    } catch (error) {
+      console.error('Error al buscar el Pokémon:', error.message);
+    }
   };
 
   return (
     <div>
-      <input type="text" onChange={handleChange} value={name} />
+      <input type="search" onChange={handleChange} value={name} />
       <button onClick={handleSearchClick}>Buscar</button>
     </div>
   );

@@ -1,14 +1,14 @@
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState} from 'react';
-
+import style from './Detail.module.css';
 
 const Detail = () => {
     const { id } = useParams(); 
     const [pokemonpersonaje, setPokemonpersonaje] =useState({})
 
     useEffect(()=>{
-        axios(`url buscar que traiga por id`)
+        axios(`http://localhost:3001/pokemons/${id}`)
         .then(({data}) => {
             if(data.name){
                 setPokemonpersonaje(data) 
@@ -24,18 +24,17 @@ const Detail = () => {
     },[id])
 
     return(
-        <div>
-            <h2>Id</h2>
-            <h2>Nombre</h2>
-            <h2>Imagen</h2>
-            <h2>Vida:{pokemonpersonaje?.hp}</h2>
-            <h2>Ataque:{pokemonpersonaje?.attack}</h2>
-            <h2>Defensa:{pokemonpersonaje?.defense}</h2>
-            <h2>Velocidad:{pokemonpersonaje?.speed}</h2>
-            <h2>Altura:{pokemonpersonaje?.height}</h2>
-            <h2>Peso:{pokemonpersonaje?.weight}</h2>
-            <h2>Tipo</h2>
-
+        <div className={style.container2}>
+            <h2 className={style.h2}>Id: {pokemonpersonaje?.id}</h2>
+            <h3 className={style.h3}>Nombre: {pokemonpersonaje?.name}</h3>
+            <p className={style.p}>Vida: {pokemonpersonaje?.hp}</p>
+            <p className={style.p}>Ataque: {pokemonpersonaje?.attack}</p>
+            <p className={style.p}>Defensa: {pokemonpersonaje?.defense}</p>
+            <p className={style.p}>Velocidad: {pokemonpersonaje?.speed}</p>
+            <p className={style.p}>Altura: {pokemonpersonaje?.height}</p>
+            <p className={style.p}>Peso: {pokemonpersonaje?.weight}</p>
+            <p className={style.p}>Tipo: {pokemonpersonaje?.type}</p>
+            <img src={pokemonpersonaje?.image} alt={pokemonpersonaje?.name} />
             <Link to='/form'>
             <button>Form</button>
             </Link>
@@ -43,4 +42,4 @@ const Detail = () => {
     )
 }
 
-export default Detail
+export default Detail;
