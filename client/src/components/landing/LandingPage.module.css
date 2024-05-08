@@ -1,5 +1,9 @@
+body {
+    background-color: #ED1C24;
+}
+
 .title {
-    color: #ed7d2a;
+    color: #2D4596;
     font-family: rowdies;
     font-size: 5rem;
     margin: 20px auto;
@@ -8,7 +12,7 @@
 }
 
 .button {
-    background-color: #ed7d2a;
+    background-color: #2D4596;
     color: #4475b2;
     padding: .3em;
     font-family: rowdies;
